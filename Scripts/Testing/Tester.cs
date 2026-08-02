@@ -12,7 +12,7 @@ namespace Com.ArthurSchmitz.UIInteractable.Testing {
         public UIInteractable interactable;
 
         private void Start() {
-            interactable.AddListener(UIInteractable.E_State.PointerDown_Left, Log);
+            interactable.AddListener(UIInteractable.E_State.PointerDownLeft, Log);
         }
 
         private void Log<TState>(Interaction<TState> interaction, StateData eventData)

@@ -101,6 +101,9 @@ namespace Com.ArthurSchmitz.UIInteractable
     [CustomPropertyDrawer(typeof(Enable))]
     public class EnablePropertyDrawer     : RendererPropertyDrawer         { protected override string ParameterName => nameof(Enable   ); }
 
+    [CustomPropertyDrawer(typeof(Position))]
+    public class PositionPropertyDrawer   : RendererSettingsPropertyDrawer { protected override string ParameterName => nameof(Position); }
+
     [CustomPropertyDrawer(typeof(Scale))]
     public class ScalePropertyDrawer      : RendererSettingsPropertyDrawer { protected override string ParameterName => nameof(Scale    ); }
 

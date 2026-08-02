@@ -18,6 +18,7 @@ namespace Com.ArthurSchmitz.UIInteractable
             GameObjectSetActive    = 100,
             BehaviourEnable        = 200,
             TransformScale         = 300,
+            TransformPosition      = 350,
             ImageTint              = 400,
             ImageSprite            = 410,
             Sound                  = 500,
@@ -34,6 +35,7 @@ namespace Com.ArthurSchmitz.UIInteractable
             { E_Type.GameObjectSetActive   , (Sign sign) => sign.setActive  },
             { E_Type.BehaviourEnable       , (Sign sign) => sign.enable     },
             { E_Type.TransformScale        , (Sign sign) => sign.scale      },
+            { E_Type.TransformPosition     , (Sign sign) => sign.position   },
             { E_Type.ImageTint             , (Sign sign) => sign.tint       },
             { E_Type.ImageSprite           , (Sign sign) => sign.sprite     },
             { E_Type.Sound                 , (Sign sign) => sign.sound      },
@@ -52,6 +54,7 @@ namespace Com.ArthurSchmitz.UIInteractable
                 { E_Type.GameObjectSetActive   , nameof(setActive) },
                 { E_Type.BehaviourEnable       , nameof(enable)    },
                 { E_Type.TransformScale        , nameof(scale)     },
+                { E_Type.TransformPosition     , nameof(position)  },
                 { E_Type.ImageTint             , nameof(tint)      },
                 { E_Type.ImageSprite           , nameof(sprite)    },
                 { E_Type.Sound                 , nameof(sound)     },
@@ -65,6 +68,7 @@ namespace Com.ArthurSchmitz.UIInteractable
         [SerializeField] public E_Type        type      ;
         [SerializeField] public SetActive     setActive ;
         [SerializeField] public Enable        enable    ;
+        [SerializeField] public Position      position  ;
         [SerializeField] public Scale         scale     ;
         [SerializeField] public Tint          tint      ;
         [SerializeField] public SetSprite     sprite    ;

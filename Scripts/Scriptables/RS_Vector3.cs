@@ -7,6 +7,6 @@ using UnityEngine;
 
 namespace Com.ArthurSchmitz.UIInteractable {
 
-    [CreateAssetMenu(menuName = nameof(UIInteractable) + "/Settings/Scale", fileName = " Scale")]
-    public class RS_Scale : SO_RendererSettings<Vector3> { }
+    [CreateAssetMenu(menuName = nameof(UIInteractable) + "/Settings/" + nameof(Vector3), fileName = " " + nameof(Vector3))]
+    public class RS_Vector3 : SO_RendererSettings<Vector3> { }
 }

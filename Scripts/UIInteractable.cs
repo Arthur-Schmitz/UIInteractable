@@ -28,17 +28,17 @@ namespace Com.ArthurSchmitz.UIInteractable
             
             PointerExit  = 500,
             
-            PointerDown_Left   = 600,
-            PointerDown_Right  = 610,
-            PointerDown_Middle = 620,
+            PointerDownLeft   = 600,
+            PointerDownRight  = 610,
+            PointerDownMiddle = 620,
             
-            PointerUp_Left    = 700,
-            PointerUp_Right   = 710,
-            PointerUp_Middle  = 720,
+            PointerUpLeft    = 700,
+            PointerUpRight   = 710,
+            PointerUpMiddle  = 720,
 
-            PointerClick_Left   = 800,
-            PointerClick_Right  = 810,
-            PointerClick_Middle = 820,
+            PointerClickLeft   = 800,
+            PointerClickRight  = 810,
+            PointerClickMiddle = 820,
 
             Move         = 900
         }
@@ -173,10 +173,10 @@ namespace Com.ArthurSchmitz.UIInteractable
         {
             SetState(eventData.button switch
             {
-                PointerEventData.InputButton.Left   => E_State.PointerClick_Left,
-                PointerEventData.InputButton.Right  => E_State.PointerClick_Right,
-                PointerEventData.InputButton.Middle => E_State.PointerClick_Middle,
-                _                                   => E_State.PointerClick_Left
+                PointerEventData.InputButton.Left   => E_State.PointerClickLeft,
+                PointerEventData.InputButton.Right  => E_State.PointerClickRight,
+                PointerEventData.InputButton.Middle => E_State.PointerClickMiddle,
+                _                                   => E_State.PointerClickLeft
             });
         }
 
@@ -187,10 +187,10 @@ namespace Com.ArthurSchmitz.UIInteractable
         {
             SetState(eventData.button switch
             {
-                PointerEventData.InputButton.Left   => E_State.PointerDown_Left,
-                PointerEventData.InputButton.Right  => E_State.PointerDown_Right,
-                PointerEventData.InputButton.Middle => E_State.PointerDown_Middle,
-                _                                   => E_State.PointerDown_Left
+                PointerEventData.InputButton.Left   => E_State.PointerDownLeft,
+                PointerEventData.InputButton.Right  => E_State.PointerDownRight,
+                PointerEventData.InputButton.Middle => E_State.PointerDownMiddle,
+                _                                   => E_State.PointerDownLeft
             });
         }
 
@@ -198,10 +198,10 @@ namespace Com.ArthurSchmitz.UIInteractable
         {
             SetState(eventData.button switch
             {
-                PointerEventData.InputButton.Left   => E_State.PointerUp_Left,
-                PointerEventData.InputButton.Right  => E_State.PointerUp_Right,
-                PointerEventData.InputButton.Middle => E_State.PointerUp_Middle,
-                _                                   => E_State.PointerUp_Left
+                PointerEventData.InputButton.Left   => E_State.PointerUpLeft,
+                PointerEventData.InputButton.Right  => E_State.PointerUpRight,
+                PointerEventData.InputButton.Middle => E_State.PointerUpMiddle,
+                _                                   => E_State.PointerUpLeft
             });
         }
 
