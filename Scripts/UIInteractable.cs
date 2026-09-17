@@ -6,6 +6,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace Com.ArthurSchmitz.UIInteractable
 {
@@ -181,7 +182,12 @@ namespace Com.ArthurSchmitz.UIInteractable
         }
 
         public void OnPointerEnter(PointerEventData eventData) => SetState(E_State.PointerEnter);
-        public void OnPointerExit(PointerEventData eventData) => SetState(E_State.PointerExit);
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            if (Mouse.current.leftButton.isPressed) return;
+
+            SetState(E_State.PointerExit);
+        }
 
         public void OnPointerDown(PointerEventData eventData)
         {
